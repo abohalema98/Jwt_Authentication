@@ -14,10 +14,8 @@ const verifyToken = async function (request, response, next) {
 
     try {
         const verified = jwt.verify(token ,process.env.TOKEN_SECRET);
-        //  
         request.user = verified
    
-        
         next()
     } catch (error) {
 

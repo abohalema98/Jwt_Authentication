@@ -10,21 +10,6 @@ require('../Model/AdminModel')
 let Admin = mongoose.model('admins')
 
 
-// router.use(verifyToken, async (request, response, next) => {
-
-//     if (await request.admin.role == 'admin') {
-//         next()
-//     } else {
-//         response.status(401).json({
-//             data: "you are not allow to see page",
-//             Role: request.admin.role,
-//             Email: request.admin.email
-
-
-//         })
-//     }
-// })
-
 router.post('/adminLogin', async (request, response) => {
     const { error } = loginValidation(request.body)
 
